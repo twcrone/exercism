@@ -12,7 +12,7 @@
   (= (str comment) ""))
 
 (defn response-for [initial-comment]
-  (let [comment (.trim initial-comment)]
+  (let [comment (clojure.string/trim initial-comment)]
     (if (yelling? comment) (str "Whoa, chill out!")
       (if (question? comment) (str "Sure.")
         (if (silence? comment) (str "Fine. Be that way!")
