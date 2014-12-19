@@ -1,11 +1,12 @@
 (ns bob)
+(require 'clojure.string)
 
 (defn question? [comment]
   (.endsWith comment "?"))
 
 (defn yelling? [comment]
-  (and (= (.toUpperCase comment) comment)
-    (not (= (.toLowerCase comment) comment))))
+  (and (= (clojure.string/upper-case comment) comment)
+    (not (= (clojure.string/lower-case comment) comment))))
 
 (defn silence? [comment]
   (= (str comment) ""))
