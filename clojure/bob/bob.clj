@@ -2,7 +2,7 @@
 (require 'clojure.string)
 
 (defn question? [comment]
-  (.endsWith comment "?"))
+  (= (last comment) \?))
 
 (defn yelling? [comment]
   (and (= (clojure.string/upper-case comment) comment)
