@@ -3,9 +3,6 @@
 (defn question? [comment]
   (.endsWith comment "?"))
 
-(defn exclamation? [comment]
-  (.endsWith (str comment) "!"))
-
 (defn yelling? [comment]
   (and (= (.toUpperCase comment) comment)
     (not (= (.toLowerCase comment) comment))))
