@@ -3,8 +3,12 @@
 (defn question? [comment]
   (.endsWith comment "?"))
 
+(defn exclamation? [comment]
+  (.endsWith (str comment) "!"))
+
 (defn response-for [comment]
   (if (question? comment)
-    ("Sure.")
-    "Whatever."))
+    (str "Sure.")
+    (if (exclamation? comment) (str "Whoa, chill out!")
+      "Whatever.")))
 
