@@ -9,12 +9,12 @@
     (not (= (clojure.string/lower-case comment) comment))))
 
 (defn silence? [comment]
-  (= (str comment) ""))
+  (= comment ""))
 
 (defn response-for [initial-comment]
   (let [comment (clojure.string/trim initial-comment)]
-    (if (yelling? comment) (str "Whoa, chill out!")
-      (if (question? comment) (str "Sure.")
-        (if (silence? comment) (str "Fine. Be that way!")
+    (if (yelling? comment) "Whoa, chill out!"
+      (if (question? comment) "Sure."
+        (if (silence? comment) "Fine. Be that way!"
           "Whatever.")))))
 
