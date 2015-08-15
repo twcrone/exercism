@@ -18,7 +18,7 @@ defmodule TeenagerTest do
   end
 
   test "asking a question" do
-    # assert Teenager.hey("Does this cryogenic chamber make me look fat?") == "Sure."
+    assert Teenager.hey("Does this cryogenic chamber make me look fat?") == "Sure."
   end
 
   test "talking forcefully" do

@@ -1,9 +1,9 @@
 defmodule Teenager do
   def hey(input) do
-  	if String.ends_with? input, "!" do
-  	  "Whoa, chill out!"
-  	else
-  	  "Whatever."
+  	cond do
+  	  String.ends_with? input, "!" -> "Whoa, chill out!"
+  	  String.ends_with? input, "?" -> "Sure."
+  	  true -> "Whatever."
   	end
   end
 end
